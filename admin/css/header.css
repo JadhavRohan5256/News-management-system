@@ -63,22 +63,6 @@
     0 00 50px #fff000,
     0 0  200px #fff000;
 }
-/* @media  screen and (max-width:542px) and (min-width:320px){
-    #topBar{
-
-    }
-    #nav ul{
-        display:block;
-        overflow: hidden;
-    }
-    #bar{
-        color: #ffffff;
-    }
-    .container{
-        width:90%;
-    }
-
-} */
 
 .profile{
     color:#ffffff;
@@ -89,7 +73,7 @@
 }
 .profile p:hover{
     font-size:2rem;
-    color:#fff000;
+    color:#2ecc71;
 }
 .fa-sign-out{
     font-size: 1.5rem;

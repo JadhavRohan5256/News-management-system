@@ -118,3 +118,33 @@ table tbody tr:nth-child(even){
     0 0 50px #fff000,
     0 0 100px #fff000;
 }
+@media screen and (max-width:750px) {
+    table tbody tr td{
+        /* background-color:#ebebeb63; */
+        border:2px solid #00000049;
+        padding:0 0.2rem;
+    }
+    table thead tr th{
+        border:2px solid #00000049;
+        padding:0 0.2rem;
+    }
+    table{
+        overflow-x: auto;
+    }
+}
+@media  screen and (max-width:690px) {
+    #table{
+        overflow-x: scroll;
+    }
+    #title h1 {
+        padding:0;
+    }
+    #title a {
+        padding:0px;
+    }
+    #title a:hover {
+        background-color:#3d3d3d;
+        box-shadow: 0px 0px 0px #3d3d3d;
+        color:#3498db;
+    }
+}

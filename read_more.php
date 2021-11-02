@@ -14,7 +14,7 @@
     ?>
     <div class="container">
         <div class="body">
-            <div class="left">
+            <div class="left" id="left">
                 <?php
                     include 'conn.php';
                   $post = $_GET['id'];
@@ -56,7 +56,7 @@
 
             <!-- left section  -->
             <div class="right">
-                <article>
+                <article class="serarchBar">
                 <!-- search file included  -->
                  <?php include 'search_bar.php';?>
                 </article>

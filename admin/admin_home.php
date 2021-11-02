@@ -25,63 +25,66 @@
         </div>
     </div>
     <div class="container">
-        <table>
-            <?php
-            $limit = 2;
-            if(isset($_GET['page'])){
-                $page = $_GET['page'];
-            }else{
-                $page = 1;
-            }
-            $offset = ($page-1)*$limit;
-            include 'conn.php';
-            $sql = "select *from user limit {$offset},{$limit}";
-            $result = mysqli_query($conn,$sql) or die("Query Error");
-            if(mysqli_num_rows($result)>0){
-        ?>
-            <thead>
-                <tr>
-                    <th>SR.NO</th>
-                    <th>FULL NAME</th>
-                    <th>USER NAME</th>
-                    <th>USER ROLE</th>
-                    <th>REGISTER DATE</th>
-                    <th>EDIT</th>
-                    <!-- <th>DELETE</th> -->
-                </tr>
-            </thead>
-            <tbody>
+        <div id="table">
+
+            <table id="table">
                 <?php
-                  while($res = mysqli_fetch_assoc($result)){
-                      ?>
-                <tr>
-                    <td>
-                        <?php echo $res['user_id'];?>
-                    </td>
-                    <td>
-                        <?php echo $res['first_name'].$res['last_name'];?>
-                    </td>
-                    <td>
-                        <?php echo $res['user_name'];?>
-                    </td>
-                    <?php
-                    if($res['user_role']== 0){
-                       echo "<td>Normal</td>";
+                    $limit = 2;
+                    if(isset($_GET['page'])){
+                        $page = $_GET['page'];
                     }else{
-                        echo "<td>Admin</td>";
+                        $page = 1;
                     }
-                    ?>
-                    <td>
-                        <?php echo $res['register_date'];?>
-                    </td>
-                    <td><a href="edit.php"><i class="fa fa-pencil-square-o"></i></a></td>
-                    <!-- <td><a href="delete.php?id=<?php echo $res['user_id'];?>"><i class="fa fa-trash"></i></a></td>   -->
-                </tr>
-                <?php
-                    }
+                    $offset = ($page-1)*$limit;
+                    include 'conn.php';
+                    $sql = "select *from user limit {$offset},{$limit}";
+                    $result = mysqli_query($conn,$sql) or die("Query Error");
+                    if(mysqli_num_rows($result)>0){
                 ?>
-            </tbody>
-        </table>
+                <thead>
+                    <tr>
+                        <th>SR.NO</th>
+                        <th>FULL NAME</th>
+                        <th>USER NAME</th>
+                        <th>USER ROLE</th>
+                        <th>REGISTER DATE</th>
+                        <th>EDIT</th>
+                        <!-- <th>DELETE</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    while($res = mysqli_fetch_assoc($result)){
+                        ?>
+                    <tr>
+                        <td>
+                            <?php echo $res['user_id'];?>
+                        </td>
+                        <td>
+                            <?php echo $res['first_name'].$res['last_name'];?>
+                        </td>
+                        <td>
+                            <?php echo $res['user_name'];?>
+                        </td>
+                        <?php
+                        if($res['user_role']== 0){
+                            echo "<td>Normal</td>";
+                        }else{
+                            echo "<td>Admin</td>";
+                        }
+                        ?>
+                        <td>
+                            <?php echo $res['register_date'];?>
+                        </td>
+                        <td><a href="edit.php"><i class="fa fa-pencil-square-o"></i></a></td>
+                        <!-- <td><a href="delete.php?id=<?php echo $res['user_id'];?>"><i class="fa fa-trash"></i></a></td>   -->
+                    </tr>
+                    <?php
+                        }
+                        ?>
+                </tbody>
+            </table>
+        </div>
         <?php
             }
             $sql1 = "select *from user";
@@ -110,6 +113,7 @@
             }
         ?>
     </div>
+    <?php include 'footer.php' ?>
 </body>
 
 </html>

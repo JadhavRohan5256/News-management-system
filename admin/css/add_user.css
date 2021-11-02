@@ -1,5 +1,5 @@
 #container{
-    background-color:#ffffff52;
+    /* background-color:#ffffff52; */
     width:60%;
     margin:0px auto;
     margin-top:3rem;
@@ -7,17 +7,22 @@
     border-radius:50px;
 }
 body{
-    background-color: #0000001a;
+    background-color: #3d3d3d;
 }
 div h1{
     text-align: center;
     padding:1rem 0px;
     font-size: 3rem;
-    color: #000000;
+    color: #3498db;
+    transition: color 1s ease-in-out;
+    font-size:2rem;
+}
+div h1:hover {
+    color:#2ecc71;
 }
 form{
-    background-color: #ffffffa8;
-    border: 2px solid #ffffff3b;
+    background-color: #000;
+    border: 2px solid #3498db;
     /* margin: 2rem 25rem; */
     /* padding: 5rem 4rem; */
     font-size: 1.4rem;
@@ -25,10 +30,17 @@ form{
     border-radius: 55px;
     padding:2rem;
 }
+form:hover {
+    border-color:#2ecc71;
+}
 form div label{
     display:flex;
-    color:#000000;
-    margin-bottom:1rem;
+    margin:1rem 0;
+    color:#3498db;
+    transition: color 1s ease-in-out;
+}
+form div label:hover {
+    color:#2ecc71;
 }
 input{
     font-size:1.3rem;
@@ -37,13 +49,19 @@ input{
     height:2rem;
     border-radius:5px;
     outline:none;
+    border:2px solid #3498db;
+    background-color: #000;
+    color:#fff;
+    transition: border 1s ease-in-out;
 }
 #btn{
-background-color: #ffffffa8;
-    
+    background-color: #000;
+
+
 }
 input:focus{ 
-    border:2px solid #0000ff;
+    border-color: #2ecc71;
+    color:#3498db;
 }
 #userRole{
     height:2rem;
@@ -52,6 +70,14 @@ input:focus{
     font-size: 1.4rem;
     width:100%;
     margin-bottom: 1rem;
+    border:2px solid #3498db;
+    background-color: #000;
+    color:#fff;
+    transition: color 1s ease-in-out;
+}
+#userRole:hover {
+    border-color: #2ecc71;
+    color:#3498db;
 }
 /* body::before{
     content: "";
@@ -66,6 +92,7 @@ input:focus{
     opacity: 0.9;
     
 } */
+
 #matching{
     color: #ff0000;
     position: absolute;
@@ -95,4 +122,36 @@ input:focus{
     position:relative; 
     top:-1.26em;
     left: 95%;
+}
+@media screen and (max-width:1100px) {
+    #open,#close {
+        left:90%;
+    }
+}
+@media screen and (max-width:700px) {
+    #open,#close,#conopen,#conclose {
+        left:85%;
+        color:#fff;
+    }
+    #container {
+        width:80%;
+    }
+}
+@media screen and (max-width:500px) {
+    #open,#close,#conopen,#conclose {
+        left:85%;
+        color:#fff;
+    }
+    #container {
+        width:90%;
+    }
+}
+@media screen and (max-width:410px) {
+    #open,#close,#conopen,#conclose {
+        left:102%;
+        color:#fff;
+    }
+    #container {
+        width:99%;
+    }
 }

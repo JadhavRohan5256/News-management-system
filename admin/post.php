@@ -23,78 +23,80 @@
     </div>
     <div class="container">
         <?php
-    if(isset($_GET['page'])){
-        $page = $_GET['page'];
+            if(isset($_GET['page'])){
+                $page = $_GET['page'];
 
-    }else{
-        $page=1;
-    }
-    if($_SESSION['userRole'] == 1){
-        $limit = 10;
-    }else{
-        $limit = 3;
-    }
-        $user_id =$_SESSION['userId'];
-        $offset = ($page-1)*$limit;
-        if($_SESSION['userRole'] == 1){
-            $sql = "select *from post 
-            left join category on category.category_id= post.category
-            left join user on post.author = user.user_id
-            limit {$offset},{$limit}";
-        }elseif($_SESSION['userRole'] == 0){
-            $sql = "select *from post 
-            left join category on category.category_id= post.category
-            left join user on post.author = user.user_id
-            where post.author = {$user_id}
-            limit {$offset},{$limit}"; 
-        }
-        include 'conn.php';
-        $result = mysqli_query($conn,$sql) or die('Query Error');
-        if(mysqli_num_rows($result) > 0){
-            ?>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>TITLE</th>
-                    <th>CATEGORY</th>
-                    <th>DATE</th>
-                    <th>AUTHOR</th>
-                    <th>EDIT</th>
-                    <th>DELETE</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-            while($res = mysqli_fetch_assoc($result)){
-                ?>
-                <tr>
-                    <td>
-                        <?php echo $res['post_id'];?>
-                    </td>
-                    <td>
-                        <?php echo $res['title'];?>
-                    </td>
-                    <td>
-                        <?php echo $res['category_name'];?>
-                    </td>
-                    <td>
-                        <?php echo $res['post_date'];?>
-                    </td>
-                    <td>
-                        <?php echo $res['first_name'] ." ".$res['last_name'];?>
-                    </td>
-                    <td><a href="fetch_post_details.php?id=<?php echo $res['post_id'];?>"><i class="fa fa-pencil-square-o"></i></a></td>
-                    <td><a href="delete.php?id=<?php echo $res['post_id'];?>& postId=<?php echo $res['category_id'];?>"><i class="fa fa-trash"></i></a></td>
-                </tr>
-                <?php
+            }else{
+                $page=1;
             }
-            ?>
-            </tbody>
-        </table>
-
-
-
+            if($_SESSION['userRole'] == 1){
+                $limit = 10;
+            }else{
+                $limit = 3;
+            }
+            $user_id =$_SESSION['userId'];
+            $offset = ($page-1)*$limit;
+            if($_SESSION['userRole'] == 1){
+                $sql = "select *from post 
+                left join category on category.category_id= post.category
+                left join user on post.author = user.user_id
+                limit {$offset},{$limit}";
+            }elseif($_SESSION['userRole'] == 0){
+                $sql = "select *from post 
+                left join category on category.category_id= post.category
+                left join user on post.author = user.user_id
+                where post.author = {$user_id}
+                limit {$offset},{$limit}"; 
+            }
+            include 'conn.php';
+            $result = mysqli_query($conn,$sql) or die('Query Error');
+            if(mysqli_num_rows($result) > 0){
+        ?>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>TITLE</th>
+                        <th>CATEGORY</th>
+                        <th>DATE</th>
+                        <th>AUTHOR</th>
+                        <th>EDIT</th>
+                        <th>DELETE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                     while($res = mysqli_fetch_assoc($result)){
+                    ?>
+                    <tr>
+                        <td>
+                            <?php echo $res['post_id'];?>
+                        </td>
+                        <td>
+                            <?php echo $res['title'];?>
+                        </td>
+                        <td>
+                            <?php echo $res['category_name'];?>
+                        </td>
+                        <td>
+                            <?php echo $res['post_date'];?>
+                        </td>
+                        <td>
+                            <?php echo $res['first_name'] ." ".$res['last_name'];?>
+                        </td>
+                        <td><a href="fetch_post_details.php?id=<?php echo $res['post_id'];?>"><i
+                                    class="fa fa-pencil-square-o"></i></a></td>
+                        <td><a
+                                href="delete.php?id=<?php echo $res['post_id'];?>& postId=<?php echo $res['category_id'];?>"><i
+                                    class="fa fa-trash"></i></a></td>
+                    </tr>
+                    <?php
+                      }
+                    ?>
+                </tbody>
+            </table>
+        </div>
         <?php
         }
         // checking user role 
@@ -129,5 +131,7 @@
         }
         ?>
     </div>
+    <?php include 'footer.php'; ?>
 </body>
+
 </html>

@@ -43,7 +43,7 @@
                                     <i class="fa fa-calendar"></i>
                                     <?php echo $res['post_date'];?>
                                 </span>
-                                <a href="read_more.php?id= <?php echo $res['post_id'];?>"  class="more a">
+                                <a href="read_more.php?id= <?php echo $res['post_id'];?>#left"  class="more a">
                                   More
                                 </a>
                             </div>

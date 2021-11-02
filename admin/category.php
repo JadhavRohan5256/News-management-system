@@ -15,11 +15,11 @@
     ?>
 <div class="container">
 <div id="title">
-    <h1>Add Categories</h1>
-    <a href="add_category.php">Add category</a>
+    <h1>Categories</h1>
+    <a href="add_category.php">Add Category</a>
 </div>
 </div>
-    <div class="container">
+    <div class="container" id="table">
     <?php
         include 'conn.php';
         $sql = "select *from category";
@@ -56,5 +56,6 @@
         }
     ?>
     </div>
+    <?php include 'footer.php' ?>
 </body>
 </html>

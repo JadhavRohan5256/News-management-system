@@ -1,37 +1,38 @@
 .container{
-    width:40%;
+    width:50%;
     margin:auto;
 }
 body{
     background-color: #34495e;
+    overflow-x: hidden;
 }
 div h1{
+    width:50%;
     text-align: center;
     margin-top:10rem;
     color:#808080;
     border:2px solid #3498db;
     background-color: #191919;
-    /* border-radius:25px; */
-    width:50%;
     margin:2rem auto;
     transition:2.6s;
     padding:0.3rem 0rem;
-    
-}
-div h1:hover{
-    border: 2px solid #2ecc71;
     border-radius:25px;
     width:100%;
 }
+div h1:hover{
+    border: 2px solid #2ecc71;
+}
 form{
+    border:2px solid #3498db;
     background-color:#191919;
     padding: 3em 2em;
+    padding:7rem 2rem;
     transition:2.6s;
-
+    border-radius:50px;
+    
 }
 form:hover{
-    padding:7rem 2rem;
-    border-radius:50px;
+    border: 2px solid #2ecc71;
 }
 form div{
     display:flex;
@@ -140,7 +141,7 @@ div a{
     color:#ffffff54;
     font-size: 2rem;
     position: relative;
-    top: -1.45em;
+    top: -1.47em;
     left:77%;
     display:none;
 }
@@ -162,3 +163,42 @@ div a{
     color:#808080;
 }
 
+@media screen and (max-width:1150px) {
+    .container {
+        width:60%;
+    }
+    form {
+        padding:7rem 2rem;
+        transition:2.6s;
+        border-radius:50px;
+        border-color:#3498db;
+    }
+    form:hover {
+        border-color:#2ecc71;
+    }
+
+}
+@media screen and (max-width:800px) {
+    .container {
+        width:90%;
+        overflow-x: hidden;
+    }
+    form {
+        padding:7rem 2rem;
+        transition:2.6s;
+        border-radius:50px;
+        border-color:#3498db;
+    }
+    form:hover {
+        border-color:#2ecc71;
+    }
+
+}
+@media screen and (max-width:550px) {
+    #open,#close {
+        left:90%;
+        font-size:1.5rem;
+        top:-2.5rem;
+    }
+
+}

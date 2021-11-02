@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=`, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/indexs.css">
+    <style>
+    
+    </style>
 </head>
 
 <body>
@@ -15,6 +18,10 @@
     ?>
     <div class="container">
         <div class="body">
+            <!-- <article class="serarchBar">
+                search file included 
+                 <?php //include 'search_bar.php';?>
+            </article> -->
             <div class="left">
                 <?php
                     include 'conn.php';
@@ -51,7 +58,7 @@
                         <?php echo $res['post_date'];?>
                         </span>
                         <p><?php echo substr($res['description'],0,150);?></p>
-                        <a href="read_more.php?id= <?php echo $res['post_id'];?>" class="read">
+                        <a href="read_more.php?id= <?php echo $res['post_id'];?>#left" class="read">
                         <i class="fa fa-book"></i>  
                             Read More
                         </a>
@@ -86,9 +93,9 @@
             </div>
             <!-- left section  -->
             <div class="right">
-                <article>
-                <!-- search file included  -->
-                 <?php include 'search_bar.php';?>
+                <article class="serarchBar">
+                    <!-- search file included  -->
+                    <?php include 'search_bar.php';?>
                 </article>
                 <div class="recent">
                     <!-- file are included -->

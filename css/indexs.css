@@ -5,7 +5,6 @@
 }
 .left{
     width:68%;
-
 }
 aside{
     display:flex;
@@ -19,16 +18,18 @@ aside{
 .information a{
     font-size: 1.2rem;
 }
-.read{
+/* .read{
     border:1px solid #000000;
     background-color:#fff000;
     padding:0.4rem 0.6rem;
     position: relative;
     top:0.4rem;
 
-}
+
+} */
 .read:hover{
-    color:#000000;
+    /* background-color:#000000; */
+    color:#006400;
 }
 .img{
     width:30%;
@@ -82,7 +83,8 @@ button{
     top:-2rem;
     left:80%;
 }
-/* recent post */
+/* recent file css start */
+
 .recent{
     background-color:#8080807c;
     margin-top:1.5rem;
@@ -119,7 +121,10 @@ a{
     display:block;
 }
 
-/* category section page  */
+/* recent file css end */
+
+/* category file css start  */
+
 #category_name h1{
     background-color:#8080804f;
     padding:0.5rem 0;
@@ -127,7 +132,9 @@ a{
     text-align: center;
 }
 
-/* recent page css */
+/* category file css end  */
+
+/* recent page css  start*/
 .page1{
     display:flex;
     list-style: none;
@@ -143,10 +150,67 @@ a{
    .a{
       font-size:0.7rem;
    }
-   /* .tag{
-       font-size:orem;
-   } */
    .warning{
        color:#ff0000;
        text-align: center;
    }
+   /* recent page css end */
+
+   /* media query  start*/
+
+   @media screen and (max-width:1150px) {
+       .body {
+           flex-direction: column;
+       }
+       .left,.right {
+           width:100%;
+       }
+       .right{
+           order: 1;
+       }
+       .left {
+           order:2;
+           justify-content: center;
+       }
+       .div {
+           justify-content:left;
+       }
+       .img1 {
+           width:100px;
+       }
+       #category_name {
+           margin-top:10rem;
+       }
+       .img {
+           object-fit: cover;
+           width:200px
+       }
+       .navagation {
+           width:100%;
+           margin:auto;
+       }
+   }
+@media screen and (max-width:700px) {
+    .img {
+        width:150px;
+        margin:auto;
+    }
+    aside {
+        flex-direction:column;
+    }
+    .information {
+        width:100%;
+    }
+    aside h2 {
+        text-align: center;
+    }
+    .page a {
+        margin:0 0.2rem;
+    }
+    .images {
+        width:70%;
+    }
+    /* .left {
+        justify-content: space-between;
+    } */
+}
