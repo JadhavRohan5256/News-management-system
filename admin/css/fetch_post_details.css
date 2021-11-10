@@ -1,0 +1,121 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    /* background-color: #0000001a; */
+    background-color:#3d3d3d;
+}
+#container{
+    /* background-color:#ffffff52; */
+    background-color:#000;
+    border:2px solid #3498db;
+    width:60%;
+    margin:3rem auto;
+    padding:1em 2em;
+    border-radius:15px;
+}
+#container:hover{
+    border-color:#2ecc71;
+}
+#formCategory div{
+    display:flex;
+    flex-direction: column;
+    font-size:1.5em;
+}
+input{
+    font-size:1.3rem;
+    height:2rem;
+    border-radius:5px;
+    outline:none;
+    background-color: #000;
+    border:2px solid #3498db;
+    /* color:#fff; */
+    color:#3498db;
+}
+input:focus{ 
+    border-color:#2ecc71;
+}
+select{
+    font-size:1.5em;
+    height:2rem;
+    
+}
+#btn{
+    display:block;
+    margin-top:1rem;
+    margin-bottom:3rem;
+    align-items: center;
+    cursor: pointer;
+    width:100%;
+}
+#textarea{
+    font-size:1.3rem;
+    outline:none;
+    border:2px solid #3498db;
+    border-radius:5px;
+    background-color: #000;
+    /* color:#fff; */
+    color:#3498db;
+}
+#textarea:focus{
+    border-color:#2ecc71;
+}
+#categorySelect{
+    font-size:1.3rem;
+    height:2rem;
+    border-radius:5px;
+    border:2px solid #3498db;
+    outline:none;
+    background-color: #000;
+    color:#3498db;
+}
+#categorySelect:focus{
+    border-color:#2ecc71;
+}
+#addCategory{
+    margin-bottom:2rem;
+}
+#file{
+    margin-top: 1rem;
+    border-radius:5px;
+    outline:none;
+    border:2px solid #3498db;
+    background-color: #000;
+    color:#fff;
+}
+#file:focus{
+    border-color:#2ecc71;
+}
+div h1{
+    text-align:center;
+    color:#fff;
+}
+
+label{
+    margin: 0.5em 0px;
+}
+div img{
+    width:40%;
+}
+
+.footer {
+    margin-bottom:-17rem;
+}
+@media screen and (max-width:500px) {
+    div h1 {
+        font-size:1.5rem;
+        color:#3498db;
+    }
+    div h1:hover {
+        color:#2ecc71;
+    }
+    #container {
+        width:90%;
+    }
+    .footer {
+        margin-bottom:-7rem;
+    }
+}

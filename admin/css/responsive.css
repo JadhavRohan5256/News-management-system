@@ -1,0 +1,73 @@
+@media screen and (max-width:1100px) {
+    .container {
+        width:90%;
+    }
+    .table {
+        overflow-x:auto;
+    }
+    body{
+        overflow-x: auto;
+    }
+    .profile p:hover {
+        font-size:1.2rem;
+    }
+}
+#title h1 {
+    font-size:1.4rem;
+}
+@media screen and (max-width:800px) {
+    table {
+        font-size:1.2rem;
+    }
+}
+@media screen and (max-width:640px) {
+    #logo{
+        display:none;
+    }
+    #header {
+        padding:1rem 0;
+    }
+}
+@media screen and (max-width:699px) {
+    #nav ul {
+        justify-content: space-between;
+    }
+    #nav ul li a {
+        padding:0 0.5rem;
+        color:#3498db;
+    }
+    #nav ul li a:hover{
+        color:#2ecc71;
+        background-color: #0d0e0d94;
+        z-index: 22;
+        background-color:#0d0e0d94;
+        box-shadow:0px 0px 0px #0d0e0d94;
+    }
+    table thead tr th {
+        padding:0.2rem;
+        border:2px solid #00000049;
+    }
+    table tbody tr td{
+        padding:0.2rem;
+        border:2px solid #00000049;
+    }
+}
+@media screen and (max-width:416px) {
+    #nav ul li a {
+        padding:0;
+    }
+    
+    .profile p:hover {
+        font-size: 1.1rem;
+    }
+    #nav ul li a:hover{
+        padding:0;
+    }
+}
+@media screen and (max-width:378px) {
+    #logout a {
+        padding:0.4rem 1rem;
+        transition: 1.2s ease;
+    }
+    
+}

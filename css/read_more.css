@@ -1,0 +1,129 @@
+.body{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+.left{
+    /* width:68%; */
+    background-color: #8080804f;
+    padding:2%;
+    border: 2px solid #80808075;
+    width:100%;
+    margin-bottom:1rem; 
+}
+aside{
+    display:flex;
+    justify-content: center;
+    background-color: #8080804f;
+    padding:2%;
+    border: 2px solid #80808075;
+    width:100%;
+  
+}
+.read{
+    border:1px solid #000000;
+    background-color:#fff000;
+    padding:0.4rem 0.6rem;
+    position: relative;
+    top:0.4rem;
+
+}
+.read:hover{
+    color:#000000;
+}
+.images{
+    width:40%;
+    display:block;
+    margin:1rem auto;
+}
+.para{
+    font-size: 1.3rem;
+}
+.details{
+    padding:0rem 0.4rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.information{
+    width:100%;
+    margin-top: 2%;
+ 
+}
+.page{
+    display:flex;
+    list-style: none;
+    margin: 1rem 0rem;
+    justify-content: center;
+}
+.page a{
+    background-color: #fff000;
+    padding:0.5rem;
+    margin:4rem 1rem;
+}
+#active{
+    background-color: #00ff00;
+}
+/* artical section  */
+.right{
+    /* flex:1; */
+    width:30%;
+}
+article{
+     padding:2%;
+     background-color:#8080804f;
+ }
+h1{
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+input{
+    width: 100%;
+    height: 2rem;
+    outline:none;
+    font-size: 1.3rem;
+}
+button{
+    height: 2rem;
+    width:20%;
+    position:relative;
+    top:-2rem;
+    left:80%;
+}
+/* recent post */
+.recent{
+    background-color:#8080807c;
+    margin-top:1.5rem;
+}
+.recent h2{
+    padding-left:1rem;
+    padding-top:1rem;
+    text-align: center;
+} 
+.div{
+    display:flex;
+    justify-content: space-between;
+    /* flex:1.7; */
+    padding:1rem;
+    border-bottom: 2px solid #80808075;
+    border-width: 80%;
+}
+.img1{
+    width:30%;
+}
+.information{
+    width:66%;
+    margin-top: 2%;
+}
+a{
+    text-decoration: none;
+    color:#000000;
+}
+.more{
+    color:#000000;
+    background-color:#fff000;
+    padding:0.2rem 0.4rem;
+}
+.titled{
+    text-align: center;
+}

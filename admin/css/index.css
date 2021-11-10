@@ -1,0 +1,212 @@
+.container{
+    width:50%;
+    margin:auto;
+}
+body{
+    background-color: #34495e;
+    overflow-x: hidden;
+}
+div h1{
+    text-align: center;
+    margin-top:10rem;
+    color:#808080;
+    border:2px solid #3498db;
+    background-color: #191919;
+    margin:2rem auto;
+    transition:2.6s;
+    padding:0.3rem 0rem;
+    border-radius:25px;
+    width:90%;
+}
+div h1:hover{
+    border: 2px solid #2ecc71;
+}
+form{
+    border:2px solid #3498db;
+    background-color:#191919;
+    padding: 3em 2em;
+    padding:7rem 2rem;
+    transition:2.6s;
+    border-radius:50px;
+    
+}
+form:hover{
+    border: 2px solid #2ecc71;
+}
+form div{
+    display:flex;
+    flex-direction:column;
+    font-size:1.3rem;
+}
+input{
+    border: 2px solid #3498db;
+    background-color: #191919;
+    /* border-radius:18px; */
+    font-size:1.3rem;
+    color:#808080;
+    text-align: center;
+    margin:0.5em auto;
+    height:2rem;
+    width:70%;
+    outline:none;
+    transition:2.6s;
+}
+input:focus{
+    border-radius:18px;
+    width:100%;
+    border: 2px solid #2ecc71;
+}
+label{
+    display:none;
+}
+/* input:focus{ 
+    border:1px solid #0000ff;
+} */
+#btn{
+    display:block;
+    margin-top:1rem;
+    margin-bottom:3rem;
+    align-items: center;
+    cursor: pointer;
+    transition:2.6s;
+}
+#btn:hover{
+    width:100%;
+    border: 2px solid #2ecc71;
+}
+
+/* Index php css */
+span:nth-child(1){
+    border-bottom: 1px solid #000000;
+    width: 40%;
+    position: relative;
+    top: -0.35rem;
+    left: 58.5%;
+    border-color:#808080;
+    
+}
+span:nth-child(2){
+    position: relative;
+    top: -1.2rem;
+    left: 48%;
+    color:#808080;
+    
+}
+span:nth-child(3){
+    border-bottom: 1px solid #000000;
+    width: 40%;
+    position: relative;
+    top: -2rem;
+    right: -0.1%;
+    border-color:#808080;
+}
+div a{
+    text-align: center;
+    text-decoration:none;
+    margin-top: 1rem;
+    color:#808080;
+}
+#signUp{
+    border: 2px solid #3498db;
+    background-color: #191919;
+    /* border-radius:18px; */
+    width:56%;
+    margin-top:-0.2rem;
+    cursor: pointer;
+    margin: auto;
+    padding:0.2rem 2rem;
+    color:#808080;
+    transition:2.6s;
+}
+#signUp:hover{
+    border-radius:18px;
+    width:80%;
+    border: 2px solid #2ecc71;
+}
+.warning{
+    color: #ff0000;
+    position: absolute;
+    top: 1rem;
+    left: 25.7rem;
+    font-size: 1.4rem;
+}
+#para{
+    color: #ff0000;
+    margin:auto;
+    display:none;
+}
+/* password eyes login page*/
+#open{
+    color:#ffffff54;
+    font-size: 2rem;
+    position: relative;
+    top: -1.47em;
+    left:77%;
+    display:none;
+}
+#close{
+    font-size: 2rem;
+    color:#ffffff54;
+    position: relative;
+    top: -1.45em;
+    left: 77%;
+}
+#forgate{
+    color:#808080;
+    transition:color 2.6s;
+}
+#forgate:hover{
+    color:#2ecc71;
+}
+::placeholder{
+    color:#808080;
+}
+
+@media screen and (max-width:1150px) {
+    .container {
+        width:60%;
+        margin:0 auto;
+    }
+    form {
+        padding:7rem 2rem;
+        transition:2.6s;
+        border-radius:50px;
+        border-color:#3498db;
+    }
+    form:hover {
+        border-color:#2ecc71;
+    }
+
+}
+@media screen and (max-width:800px) {
+    .container {
+        width:90%;
+        overflow-x: hidden;
+    }
+    form {
+        padding:7rem 2rem;
+        transition:2.6s;
+        border-radius:50px;
+        border-color:#3498db;
+    }
+    form:hover {
+        border-color:#2ecc71;
+    }
+
+}
+@media screen and (max-width:550px) {
+    #open,#close {
+        left:90%;
+        font-size:1.5rem;
+        top:-2.5rem;
+    }
+    input {
+        width:100%;
+        border-radius: 25px;
+    }
+    #signUp {
+        width:80%;
+        border-radius:25px;
+    }
+
+}

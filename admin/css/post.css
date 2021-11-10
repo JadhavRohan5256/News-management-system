@@ -1,0 +1,156 @@
+body{
+    background-color:#3d3d3d;
+}
+#title{
+    display:flex;
+   justify-content: space-between;
+   padding: 4rem 0rem;
+   align-items: center;
+}
+#title h1{
+    color:#ffffff;
+}
+#title a{
+    color:#ffffff;
+    padding:0.5rem 2rem;
+    text-decoration:none;
+    font-size:1.4rem;
+    font-weight:bold;
+}
+#title a:hover{
+    color:#000000;
+    border-radius: 10px;
+    background-color:#00ff00;
+    box-shadow:
+    0 0 5px #00ff00,
+    0 0 25px #00ff00,
+    0 0 50px #00ff00,
+    0 0 100px #00ff00;
+}
+table{
+    border-collapse:collapse;
+    width:100%; 
+    font-size:1.3rem;
+    color:#ffffff;
+}
+table thead tr{
+    background-color:#f4433673;  
+}
+table tbody tr td:nth-child(4){
+    padding: 0rem 3rem;
+}
+table thead tr th,tbody tr td{
+    padding:1rem 1rem;
+}
+table tbody tr{
+    text-align:center;
+    padding:1rem 0rem;  
+}
+table tbody tr:nth-child(odd){
+    background-color:#ebebeb63;
+    border-bottom:2px solid #3a3a3a3a;
+}
+table tbody tr:nth-child(even){
+    border-bottom:2px solid #0000003a;
+}
+#pagenation{
+    display:flex;
+    justify-content:center;
+    position:relative;
+    top:2.1rem;
+   
+    }
+    #pagenation li{
+    list-style:none;
+}
+#pagenation li a{
+    text-decoration:none;
+    background-color:#00ff00;
+    padding:0.5rem;
+    margin-left:1rem;
+}
+#active{
+    background-color:#fff000; 
+}
+
+/* icons details */
+.fa-trash{
+    color:#ffffff;  
+}
+.fa-pencil-square-o{
+    color:#ffffff;
+}
+.fa-pencil-square-o:hover{
+    color:#00ff00;
+}
+.fa-trash:hover{
+    color:#ff0000;  
+}
+#prev{
+    color:#ffffff;
+}
+#next{
+    color:#ffffff;
+}
+#prev:hover{
+    color:#000000;
+    background-color:#fff000;
+    box-shadow: 
+    0 0 5px #fff000,
+    0 0 25px #fff000,
+    0 0 50px #fff000,
+    0 0 100px #fff000;
+}
+#next:hover{
+    color:#000000;
+    background-color:#fff000;
+    box-shadow: 
+    0 0 5px #fff000,
+    0 0 25px #fff000,
+    0 0 50px #fff000,
+    0 0 100px #fff000;
+}
+/* paganation  */
+#pagenation{
+    display:flex;
+    justify-content:center;
+    position:relative;
+    top:2.1rem;
+   
+    }
+    #pagenation li{
+    list-style:none;
+}
+#active{
+    background-color:#fff000; 
+}
+#pagenation li a{
+    text-decoration:none;
+    background-color:#00ff00;
+    padding:0.5rem;
+    margin-left:1rem;
+}
+.footer{
+    /* margin-top:6rem;
+     position: absolute;
+    bottom: 0rem; */ 
+    margin-bottom:-54rem;
+    background-color:#000000;
+    color:#ffffff;
+    padding:2rem 0rem;
+    text-align: center;
+}
+/* @media screen and (min-width:800px) and (max-width:910px) {
+    .footer {
+        margin-bottom:-68rem;
+    }
+    table thead tr th{
+        font-size:1rem;
+        padding:0.5rem 0.5rem;
+    }
+} */
+@media screen and (min-width:698px) and (max-width:982px) {
+    .footer {
+        margin-bottom:-68rem;
+    }
+}
