@@ -1,3 +1,3 @@
 # News-management-system
-This is Content Management System based project. this is pure responsive site.
+this is modified version of News Mangement System
 Hosted link = https://todaysnews.epizy.com
