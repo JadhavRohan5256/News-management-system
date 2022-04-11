@@ -1,3 +1,3 @@
-# http://todaysnews.epizy.com  News-management-system
+#  News-management-system
 this is modified version of News Mangement System
 Hosted link = http://todaysnews.epizy.com
